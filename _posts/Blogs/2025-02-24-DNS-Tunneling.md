@@ -66,7 +66,11 @@ Purpose: Returns the IPv4 address of a domain.
 
 Example Query: `example.com → A`
 
-Example Response:** `example.com → 192.168.1.1`
+Example Response:
+
+```
+example.com → 192.168.1.1
+```
 
 ------
 
@@ -76,7 +80,11 @@ Example Response:** `example.com → 192.168.1.1`
 
 Example Query: `example.com → AAAA`
 
-Example Response: `example.com → 2001:db8::1`
+Example Response: 
+
+```
+example.com → 2001:db8::1
+```
 
 ------
 
@@ -86,7 +94,11 @@ Example Response: `example.com → 2001:db8::1`
 
  Example Query: `www.example.com → CNAME`
 
-Example Response: `www.example.com → example.com`
+Example Response: 
+
+```
+www.example.com → example.com
+```
 
 ------
 
@@ -96,7 +108,11 @@ Example Response: `www.example.com → example.com`
 
  Example Query: `example.com → MX`
 
-Example Response: `mail.example.com (Priority: 10)`
+Example Response: 
+
+```
+mail.example.com (Priority: 10)
+```
 
 ------
 
@@ -106,7 +122,11 @@ Example Response: `mail.example.com (Priority: 10)`
 
  Example Query: `example.com → TXT`
 
-Example Response: `"v=spf1 include:_spf.google.com ~all"`
+Example Response: 
+
+```
+"v=spf1 include:_spf.google.com ~all"
+```
 
 ------
 
@@ -116,7 +136,7 @@ Example Response: `"v=spf1 include:_spf.google.com ~all"`
 
  Example Query: `example.com → NS`
 
- Example Response: `
+ Example Response:
 
 ```
 ns1.example.com
@@ -147,7 +167,11 @@ Serial: 2024022401
 
  Example Query: `192.168.1.1 → PTR`
 
-Example Response: `example.com`
+Example Response:
+
+```
+example.com
+```
 
 ------
 
@@ -195,9 +219,9 @@ Replacement: .
 
 - **Google Drive API**: In later variants, RogueRobin incorporates the use of the Google Drive API as an alternative C2 channel. It uploads and monitors files on a Google Drive account controlled by the attackers, enabling them to send commands and receive data through a legitimate cloud service, thereby blending malicious traffic with normal network activity.
 
-The following [link](https://n1ght-w0lf.github.io/malware%20analysis/roguerobin-trojan/#c2-communications) provides details on the communication methods used by **RogueRobin** to establish a Command and Control (C2) channels.
-
 ![](/assets\images\Blogs\dns_tunneling\c2_conn.png)
+
+The following [link](https://n1ght-w0lf.github.io/malware%20analysis/roguerobin-trojan/#c2-communications) provides details on the communication methods used by **RogueRobin** to establish a Command and Control (C2) channels.
 
 ## Detecting DNS Tunneling Using Splunk
 
