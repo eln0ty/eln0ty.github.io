@@ -4,7 +4,7 @@ classes: wide
 header:
   teaser: /assets/images/Blogs/dns_tunneling/logo.jpg
 ribbon: green
-description: "Exploits the DNS protocol to bypass security controls, enabling data exfiltration, C2 communication and covert cyber threats."
+description: "Exploits the DNS protocol to bypass security controls, enabling data exfiltration, C2 communication."
 categories:
  - Blog
 toc: true
@@ -60,63 +60,63 @@ This allows an attacker to execute system commands through DNS, completely bypas
 
 ## DNS Types
 
-#### **1. A (Address Record)**
+##### **1. A (Address Record)**
 
-######  **Purpose:** Returns the IPv4 address of a domain.
+Purpose: Returns the IPv4 address of a domain.
 
- **Example Query:** `example.com → A`
+Example Query: `example.com → A`
 
- **Example Response:** `example.com → 192.168.1.1`
-
-------
-
-#### **2. AAAA (IPv6 Address Record)**
-
- **Purpose:** Returns the IPv6 address of a domain.
-
- **Example Query:** `example.com → AAAA`
-
- **Example Response:** `example.com → 2001:db8::1`
+Example Response:** `example.com → 192.168.1.1`
 
 ------
 
-#### **3. CNAME (Canonical Name Record)**
+##### **2. AAAA (IPv6 Address Record)**
 
- **Purpose:** Creates an alias for another domain name.
+ Purpose: Returns the IPv6 address of a domain.
 
- **Example Query:** `www.example.com → CNAME`
+Example Query: `example.com → AAAA`
 
- **Example Response:** `www.example.com → example.com`
-
-------
-
-#### **4. MX (Mail Exchange Record)**
-
- **Purpose:** Specifies the mail server for a domain.
-
- **Example Query:** `example.com → MX`
-
- **Example Response:** `mail.example.com (Priority: 10)`
+Example Response: `example.com → 2001:db8::1`
 
 ------
 
-#### **5. TXT (Text Record)**
+##### **3. CNAME (Canonical Name Record)**
 
- **Purpose:** Stores text information, often used for email authentication (SPF, DKIM, DMARC).
+ Purpose: Creates an alias for another domain name.
 
- **Example Query:** `example.com → TXT`
+ Example Query: `www.example.com → CNAME`
 
- **Example Response:** `"v=spf1 include:_spf.google.com ~all"`
+Example Response: `www.example.com → example.com`
 
 ------
 
-#### **6. NS (Name Server Record)**
+##### **4. MX (Mail Exchange Record)**
 
- **Purpose:** Specifies the authoritative name servers for a domain.
+ Purpose: Specifies the mail server for a domain.
 
- **Example Query:** `example.com → NS`
+ Example Query: `example.com → MX`
 
- **Example Response:** `
+Example Response: `mail.example.com (Priority: 10)`
+
+------
+
+##### **5. TXT (Text Record)**
+
+ Purpose: Stores text information, often used for email authentication (SPF, DKIM, DMARC).
+
+ Example Query: `example.com → TXT`
+
+Example Response: `"v=spf1 include:_spf.google.com ~all"`
+
+------
+
+##### **6. NS (Name Server Record)**
+
+ Purpose: Specifies the authoritative name servers for a domain.
+
+ Example Query: `example.com → NS`
+
+ Example Response: `
 
 ```
 ns1.example.com
@@ -125,13 +125,13 @@ ns2.example.com
 
 ------
 
-#### **7. SOA (Start of Authority Record)**
+##### **7. SOA (Start of Authority Record)**
 
- **Purpose:** Provides administrative details about a domain zone.
+ Purpose: Provides administrative details about a domain zone.
 
- **Example Query:** `example.com → SOA`
+ Example Query: `example.com → SOA`
 
- **Example Response:**
+Example Response:
 
 ```
 Primary Name Server: ns1.example.com
@@ -141,23 +141,23 @@ Serial: 2024022401
 
 ------
 
-#### **8. PTR (Pointer Record)**
+##### **8. PTR (Pointer Record)**
 
- **Purpose:** Used for reverse DNS lookups (IP to domain name).
+ Purpose: Used for reverse DNS lookups (IP to domain name).
 
- **Example Query:** `192.168.1.1 → PTR`
+ Example Query: `192.168.1.1 → PTR`
 
- **Example Response:** `example.com`
+Example Response: `example.com`
 
 ------
 
-#### **9. SRV (Service Record)**
+##### **9. SRV (Service Record)**
 
- **Purpose:** Defines the location (port and hostname) of specific services.
+ Purpose: Defines the location (port and hostname) of specific services.
 
- **Example Query:** `_service._proto.example.com → SRV`
+ Example Query: `_service._proto.example.com → SRV`
 
- **Example Response:**
+Example Response:
 
 ```
 Priority: 10
@@ -168,13 +168,13 @@ Target: sip.example.com
 
 ------
 
-#### **10. NAPTR (Naming Authority Pointer Record)**
+##### **10. NAPTR (Naming Authority Pointer Record)**
 
- **Purpose:** Used for rewriting rules in VoIP and SIP services.
+ Purpose: Used for rewriting rules in VoIP and SIP services.
 
- **Example Query:** `example.com → NAPTR`
+ Example Query: `example.com → NAPTR`
 
- **Example Response:**
+Example Response:
 
 ```
 Order: 100
