@@ -16,7 +16,7 @@ The Domain Name System (DNS) is a crucial protocol that translates domain names 
 
 This technique is known as DNS Tunneling, where malware hides malicious traffic inside legitimate-looking DNS queries and responses, making detection difficult. So attacks have been used to great effect by malicious actors in the real world, leading to significant damage to industries and organizations.
 
-## How Does DNS Tunneling Works?
+## How Does DNS Tunneling Work?
 
 #### The Core Concept
 
@@ -34,7 +34,7 @@ DNS Tunneling works by embedding encoded data inside DNS requests and responses,
 
 4. This communication loop continues, allowing data exfiltration or command execution without triggering traditional security alerts.
 
-#### How Attackers Execute DNS Tunneling
+## How Attackers Execute DNS Tunneling
 
 - ##### Setting Up the Attack an attacker needs:
 
