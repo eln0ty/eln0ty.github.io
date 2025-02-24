@@ -10,13 +10,13 @@ categories:
 toc: true
 ---
 
-## **Why Do Attackers Use DNS Tunneling?**
+## **What is DNS Tunneling?**
 
 The Domain Name System (DNS) is a crucial protocol that translates domain names (e.g., google.com) into IP addresses. Because DNS is allowed in most networks even those protected by firewalls and proxies attackers exploit it as a covert channel to exfiltrate data, communicate with compromised machines, or execute remote commands.
 
 This technique is known as DNS Tunneling, where malware hides malicious traffic inside legitimate-looking DNS queries and responses, making detection difficult. So attacks have been used to great effect by malicious actors in the real world, leading to significant damage to industries and organizations.
 
-## How Does DNS Tunneling Work?
+## How Does DNS Tunneling Works?
 
 #### The Core Concept
 
@@ -236,7 +236,7 @@ index=dns_logs
 | sort - count
 ```
 
-## Detecting DNS Tunneling Using Suricata
+## Detecting DNS Tunneling With Suricata
 
 Suricata rules are **signature-based detection rules** used in **Intrusion Detection Systems (IDS), Intrusion Prevention Systems (IPS), and Network Security Monitoring**. These rules define patterns and conditions to detect **malicious traffic**, including exploits, malware, and data exfiltration.
 
@@ -249,7 +249,7 @@ threshold: type both, track by_src, count 50, seconds 60;
 classtype:network-protocol-command-decode;)
 ```
 
-## How to block DNS Tunneling
+## How to block!
 
 1. #### Restrict External DNS Servers
 
